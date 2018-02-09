@@ -12,5 +12,9 @@ describe.only('Calculadora Kata', () => {
     it('Quando enviado apenas um numero retorne o proprio numero', () => {
       expect(add('1')).to.equal(1)
     });
+
+    it('Quando enviado dois numeros retorne a soma dos dois', () => {
+      expect(add('1,2')).to.equal(3)
+    });
   });
 });
