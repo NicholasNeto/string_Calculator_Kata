@@ -1,5 +1,4 @@
 
-
 var add = function (dados) {
   if(dados === ' ') {
     return 0
