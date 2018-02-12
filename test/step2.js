@@ -5,7 +5,7 @@ describe('Calculadora Kata', () => {
   describe('add', () => {
     describe('step1', () => {
       it('Quando enviado string vazia retorne 0', () => {
-        expect(add(' ')).to.equal(0)
+        expect(add('')).to.equal(0)
       });
 
       it('Quando enviado apenas um numero retorne o proprio numero', () => {
@@ -27,6 +27,6 @@ describe('Calculadora Kata', () => {
       it('Permitir que add receba quantidade desconhecida de números (passando mais de dois numeros)', () => {
         expect(add('1,2,3,4,5,6')).to.equal(21)
       });
-    })  
+    })
   });
 });

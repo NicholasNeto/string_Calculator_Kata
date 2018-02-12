@@ -1,7 +1,7 @@
 
 
 var add = function (dados) {
-  if(dados === ' ') {
+  if(dados === '') {
     return 0
   }
 

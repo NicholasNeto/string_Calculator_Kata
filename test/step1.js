@@ -6,7 +6,7 @@ describe('Calculadora Kata', () => {
   describe('add', () => {
     describe('step1', () => {
       it('Quando enviado string vazia retorne 0', () => {
-        expect(add(' ')).to.equal(0)
+        expect(add('')).to.equal(0)
       });
 
       it('Quando enviado apenas um numero retorne o proprio numero', () => {
