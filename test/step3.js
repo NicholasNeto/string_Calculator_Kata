@@ -19,8 +19,8 @@ describe('Calculadora Kata', () => {
         expect(add('123,456')).to.equal(579)
       });
 
-      it('Permitir que add receba quantidade desconhecida de números (passando mais de dois numeros)', () => {
-        expect(add('1,2,3,4,5,6')).to.equal(21)
+      it('Permitir que add receba quantidade desconhecida de números e valores aletorios', () => {
+        expect(add('1,2,123,4,235,6,2345')).to.equal(2716)
       });
 
       it('Deve aceitar diferentes tipos de entrada', () => {
