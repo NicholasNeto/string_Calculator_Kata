@@ -1,4 +1,4 @@
-var add = require('../step2');
+var add = require('../step3');
 var expect = require('chai').expect;
 
 describe('Calculadora Kata', () => {
@@ -34,6 +34,14 @@ describe('Calculadora Kata', () => {
 
       it('step2: Permitir que add receba quantidade desconhecida de números (passando mais de dois numeros)', () => {
         expect(add('1,2,3,4,5,6')).to.equal(21)
+      });
+
+      it('step3: Deve aceitar diferentes tipos de entrada', () => {
+        expect(add("1\n2,3")).to.equal(6)
+      });
+
+      it('step3: Deve aceitar diferentes tipos de entrada', () => {
+        expect(add("22\n33,43")).to.equal(98)
       });
   });
 });
