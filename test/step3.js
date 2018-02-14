@@ -27,10 +27,10 @@ describe('Calculadora Kata', () => {
         expect(add('1,2,3,5,8,13,21,34,55,89')).to.equal(231);
       });
 
-      it.only('Deve aceitar diferentes tipos de entrada', () => {
-        //expect(add("1\n2,3")).to.equal(6)
-        //expect(add("22\n33,43")).to.equal(98)
-        //expect(add("22,33,44,33,6\n43")).to.equal(181)
+      it('Deve aceitar diferentes tipos de entrada', () => {
+        expect(add("1\n2,3")).to.equal(6)
+        expect(add("22\n33,43")).to.equal(98)
+        expect(add("22,33,44,33,6\n43")).to.equal(181)
         expect(add("22,33,44\n33,\n43")).to.equal(175)
       });
 
