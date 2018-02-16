@@ -25,9 +25,9 @@ var criaLista = function (dados) {
 
 var stringVazia = function (entrada) {
   if (entrada === '') {
-    return true
+    return (entrada === '')
   } else {
-    return false
+    return (entrada === '')
   }
 }
 
