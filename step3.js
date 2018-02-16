@@ -18,7 +18,7 @@ var add = function (dados) {
 }
 
 var criaLista = function (dados) {
-  var preLista = dados.replace(/\n/g, ',').replace(/,,/g, ',0,')
+  var preLista = dados.replace(/\n/g, ',')
   var lista = preLista.split(',')
   return lista
 }
