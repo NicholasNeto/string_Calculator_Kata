@@ -17,11 +17,7 @@ var add = function (dados) {
 }
 
 var stringVazia = function (entrada) {
-  if (entrada === '') {
-    return (entrada === '')
-  } else {
-    return (entrada === '')
-  }
+  return (entrada === '')
 }
 
 module.exports = add
