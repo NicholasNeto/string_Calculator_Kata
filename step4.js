@@ -24,14 +24,13 @@ var stringVazia = function (entrada) {
 }
 
 var encontraDelimitador = function(entrada) {
-  var lista = []
+  var indexFinal = entrada.length
   var delimitador = entrada[2]
-  var stringModificada = entrada.replace(/\n/g, delimitador)
-  var preLista = stringModificada.split(delimitador)
-  for(var x = 2; x < preLista.length; x++){
-    lista.push(preLista[x])
-  }
-  return lista
+  var preLista = entrada.substring(4, indexFinal)
+  var lista = preLista.replace(/\n/g, delimitador)
+  var listaNUmeros = lista.split(delimitador)
+  return listaNUmeros;
+
 }
 
 module.exports = add
