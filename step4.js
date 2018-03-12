@@ -1,16 +1,16 @@
 
 var add = function (dados) {
 
-  if(stringVazia(dados)){
+  if (stringVazia(dados)){
     return 0
   }
 
-  if(dados.indexOf('//') !== -1){
-    var listaNumeros = encontraDelimitador(dados)
-  } else {
-    var preLista = dados.replace(/\n/g, ',')
-    var listaNumeros = preLista.split(',')
-  }
+  if (dados.indexOf('//') !== -1) {
+    var dados = encontraDelimitador(dados)
+  };
+
+  var preLista = dados.replace(/\n/g, ',')
+  var listaNumeros = preLista.split(',')
 
   var resultado = listaNumeros.reduce(function (numero, cadaLetra) {
     return numero + parseInt(cadaLetra)
@@ -25,11 +25,10 @@ var stringVazia = function (entrada) {
 
 var encontraDelimitador = function(entrada) {
   var delimitador = entrada[2]
-  var preLista = entrada.substring(4)
-  var lista = preLista.replace(/\n/g, delimitador).replace(/,/g, delimitador)
-  var listaNumeros = lista.split(delimitador)
-  return listaNumeros;
-
+  var string = entrada.substring(4)
+  var regexp = new RegExp(delimitador, 'g');
+  var listaNumeros = string.replace(regexp, ",");
+  return listaNumeros
 }
 
 module.exports = add
