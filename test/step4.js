@@ -34,7 +34,7 @@ describe('Calculadora Kata', () => {
         expect(add("22,33,44\n33\n43")).to.equal(175)
       });
 
-      it.only('Deve suportar diferentes tipos de delimitador', () => {
+      it('Deve suportar diferentes tipos de delimitador', () => {
         expect(add("//;\n1;2")).to.equal(3)
         expect(add("//-\n1-2-32")).to.equal(35)
         expect(add("//_\n1_2_543_234")).to.equal(780)
