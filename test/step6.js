@@ -54,6 +54,7 @@ describe('Calculadora Kata', () => {
       it('Deve ignorar numeros acima de 1000', () => {
         expect(add('100,101,1001')).to.equal(201)
         expect(add('1,43212,1001')).to.equal(1)
+        expect(add('1,43212,1001, 1000')).to.equal(1001)
       });
   });
 });
