@@ -1,7 +1,7 @@
 var add = require('../step5');
 var expect = require('chai').expect;
 
-describe.only('Calculadora Kata', () => {
+describe('Calculadora Kata', () => {
   describe('add', () => {
 
       it('Quando enviado string vazia retorne 0', () => {
