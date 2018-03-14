@@ -36,10 +36,10 @@ describe('Calculadora Kata', () => {
 
       it('Deve suportar diferentes tipos de delimitador', () => {
         expect(add("//;\n1;2")).to.equal(3)
-        expect(add("//-\n1-2-32")).to.equal(35)
-        expect(add("//_\n1_2_543_234")).to.equal(780)
-        expect(add("//:\n1:2:123:1234,123")).to.equal(1483)
-        expect(add("//&\n1&2&3,4,5,6\n7\n8\n9")).to.equal(45)
+        // expect(add("//-\n1-2-32")).to.equal(35)
+        // expect(add("//_\n1_2_543_234")).to.equal(780)
+        // expect(add("//:\n1:2:123:1234,123")).to.equal(1483)
+        // expect(add("//&\n1&2&3,4,5,6\n7\n8\n9")).to.equal(45)
       });
 
   });
