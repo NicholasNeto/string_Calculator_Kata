@@ -12,15 +12,10 @@ var add = function (dados) {
     var preLista = dados.replace(/\n/g, ',')
     listaNumeros = preLista.split(',')
 
-    //console.log('antes de tudo', listaNumeros)
+    var tiposNumeros = listaNumerosNegativos(listaNumeros)
 
-
-    var tiposNumeros = isNumerosNegativos(listaNumeros)
-
-    if (tiposNumeros[0].numerosNegativos.length > 0) {
-      return 'negatives not allowed:' + tiposNumeros[0].numerosNegativos
-    } else {
-      listaNumeros = tiposNumeros[0].numerosPositivos
+    if (tiposNumeros.length > 0) {
+      return 'negatives not allowed:' + tiposNumeros
     }
   }
 
@@ -44,21 +39,14 @@ var encontraDelimitador = function(entrada) {
 }
 
 
-var isNumerosNegativos = function (entrada) {
 
-  var contadorDeNumeros = {listaNumerosNegativos: [], listaNumerosPositivos: []}
+var numerosNegativos = function(entrada) {
+  return entrada < 0;
+}
 
-  var tiposNumeros = entrada.map((numero) => {
-
-    if (numero < 0 ) {
-      contadorDeNumeros.listaNumerosNegativos.push(numero)
-    } else {
-      contadorDeNumeros.listaNumerosPositivos.push(numero)
-    }
-    return { numerosNegativos: contadorDeNumeros.listaNumerosNegativos, numerosPositivos: contadorDeNumeros.listaNumerosPositivos }
-  });
-
-  return tiposNumeros
+var listaNumerosNegativos = function (entrada) {
+  var listNumerosNegatvos = entrada.filter(numerosNegativos)
+  return listNumerosNegatvos
 }
 
 module.exports = add
