@@ -1,5 +1,8 @@
 
 var add = function (dados) {
+  //var e = new Error();
+  //var e = function () { throw new TypeError('negatives not allowed:'); };
+  var err = new TypeError('negatives not allowed:');
   var listaNumeros
 
   if (stringVazia(dados)){
@@ -11,13 +14,14 @@ var add = function (dados) {
   } else {
     var preLista = dados.replace(/\n/g, ',')
     listaNumeros = preLista.split(',')
-
-    var tiposNumeros = listaNumerosNegativos(listaNumeros)
-
-    if (tiposNumeros.length > 0) {
-      return 'negatives not allowed:' + tiposNumeros
-    }
   }
+
+  var tiposNumeros = listaNumerosNegativos(listaNumeros)
+
+  if (tiposNumeros.length > 0) {
+    throw err;
+  }
+
 
   var resultado = listaNumeros.reduce(function (numero, cadaLetra) {
     return numero + parseInt(cadaLetra)
