@@ -42,15 +42,14 @@ describe('Calculadora Kata', () => {
         expect(add("//&\n1&2&3,4,5,6\n7\n8\n9")).to.equal(45)
       });
 
-      //var badFn = function () { throw new TypeError('negatives not allowed:-4'); };
+
       it('não deve calcular com numeros negativos', () => {
-        //expect(add('1,2,3,-4,5,6')).to.throw(TypeError, 'negatives not allowed:')
         expect(() => add('1,2,3,-4,5,6')).to.throw('negatives not allowed:-4')
-        // expect(add('1,2,3,-4,534,634')).to.throw('negatives not allowed:-4')
-        // expect(add('1,-232,3,-4,534,634')).to.throw('negatives not allowed:-232,-4')
-        // expect(add("1\n2,-3,-4")).to.throw('negatives not allowed:-3,-4')
-        // expect(add("22,33,-44,-338,6\n43")).to.throw('negatives not allowed:-44,-338')
-        // expect(add("//&\n1&2&3,4,-5,6\n-7\n8\n9")).to.throw('negatives not allowed:-5,-7')
+        expect(() => add('1,2,3,-4,534,634')).to.throw('negatives not allowed:-4')
+        expect(() => add('1,-232,3,-4,534,634')).to.throw('negatives not allowed:-232,-4')
+        expect(() => add("1\n2,-3,-4")).to.throw('negatives not allowed:-3,-4')
+        expect(() => add("22,33,-44,-338,6\n43")).to.throw('negatives not allowed:-44,-338')
+        expect(() => add("//&\n1&2&3,4,-5,6\n-7\n8\n9")).to.throw('negatives not allowed:-5,-7')
       });
 
   });

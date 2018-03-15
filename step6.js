@@ -10,13 +10,14 @@ var add = function (dados) {
   } else {
     var preLista = dados.replace(/\n/g, ',')
     listaNumeros = preLista.split(',')
-
-    var tiposNumeros = listaNumerosNegativos(listaNumeros)
-
-    if (tiposNumeros.length > 0) {
-      return 'negatives not allowed:' + tiposNumeros
-    }
   }
+
+  var tiposNumeros = listaNumerosNegativos(listaNumeros)
+
+  if (tiposNumeros.length > 0) {
+    throw 'negatives not allowed:' + tiposNumeros;
+  }
+
 
   listaNumeros = listaNumerosMenores1000(listaNumeros)
   var resultado = listaNumeros.reduce(function (numero, cadaLetra) {
@@ -44,7 +45,7 @@ var numerosNegativos = function(entrada) {
   return entrada < 0;
 }
 
-var numerosMaior1000 = function(entrada) {
+var numerosMenores1000 = function(entrada) {
   return entrada <= 1000;
 }
 
@@ -56,7 +57,7 @@ var listaNumerosNegativos = function (entrada) {
 
 
 var listaNumerosMenores1000 = function (entrada) {
-  var listaNumerosMenores1000 = entrada.filter(numerosMaior1000)
+  var listaNumerosMenores1000 = entrada.filter(numerosMenores1000)
   return listaNumerosMenores1000
 }
 

@@ -1,8 +1,5 @@
 
 var add = function (dados) {
-  //var e = new Error();
-  //var e = function () { throw new TypeError('negatives not allowed:'); };
-  var err = new TypeError('negatives not allowed:');
   var listaNumeros
 
   if (stringVazia(dados)){
