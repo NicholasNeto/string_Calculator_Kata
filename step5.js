@@ -19,7 +19,7 @@ var add = function (dados) {
   var tiposNumeros = listaNumerosNegativos(listaNumeros)
 
   if (tiposNumeros.length > 0) {
-    throw err;
+    throw 'negatives not allowed:' + tiposNumeros;
   }
 
 

@@ -45,7 +45,7 @@ describe('Calculadora Kata', () => {
       //var badFn = function () { throw new TypeError('negatives not allowed:-4'); };
       it('não deve calcular com numeros negativos', () => {
         //expect(add('1,2,3,-4,5,6')).to.throw(TypeError, 'negatives not allowed:')
-        expect(add('1,2,3,-4,5,6')).to.throw(TypeError)
+        expect(() => add('1,2,3,-4,5,6')).to.throw('negatives not allowed:-4')
         // expect(add('1,2,3,-4,534,634')).to.throw('negatives not allowed:-4')
         // expect(add('1,-232,3,-4,534,634')).to.throw('negatives not allowed:-232,-4')
         // expect(add("1\n2,-3,-4")).to.throw('negatives not allowed:-3,-4')
