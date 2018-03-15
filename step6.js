@@ -54,7 +54,8 @@ var listaNumerosNegativos = function (entrada) {
   return listNumerosNegatvos
 }
 
-var listaNumerosMaiores1000 = function (entrada) {
+
+var listaNumerosMenores1000 = function (entrada) {
   var listaNumerosMaiores1000 = entrada.filter(numerosMaior1000)
   return listaNumerosMaiores1000
 }
