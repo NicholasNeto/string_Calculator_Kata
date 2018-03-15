@@ -18,8 +18,8 @@ var add = function (dados) {
     }
   }
 
-  var a = listaNumerosMaiores1000(listaNumeros)
-  var resultado = a.reduce(function (numero, cadaLetra) {
+  listaNumeros = listaNumerosMenores1000(listaNumeros)
+  var resultado = listaNumeros.reduce(function (numero, cadaLetra) {
     return numero + parseInt(cadaLetra)
   }, 0)
 
@@ -56,8 +56,8 @@ var listaNumerosNegativos = function (entrada) {
 
 
 var listaNumerosMenores1000 = function (entrada) {
-  var listaNumerosMaiores1000 = entrada.filter(numerosMaior1000)
-  return listaNumerosMaiores1000
+  var listaNumerosMenores1000 = entrada.filter(numerosMaior1000)
+  return listaNumerosMenores1000
 }
 
 module.exports = add
