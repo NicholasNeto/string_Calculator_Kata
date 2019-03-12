@@ -14,5 +14,4 @@ var add = function (dados) {
   return resultado
 }
 
-
 module.exports = add;
