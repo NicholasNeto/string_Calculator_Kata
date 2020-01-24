@@ -1,4 +1,4 @@
-# String Calculator Kata
+# String Calculator Kata oi
 The following is a TDD Kata, an exercise in coding, refactoring and test-first, that you should apply daily for at least 15-30 minutes.
 
 ## Before you start
